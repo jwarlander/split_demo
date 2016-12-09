@@ -1,24 +1,23 @@
 # SplitDemo
 
-**TODO: Add description**
+Demo of Tallak Tveide's StreamSplit.
 
-## Installation
+## Running
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Fetch dependencies:
 
-  1. Add `split_demo` to your list of dependencies in `mix.exs`:
+    mix deps.get
 
-    ```elixir
-    def deps do
-      [{:split_demo, "~> 0.1.0"}]
-    end
-    ```
+Run the demo script:
 
-  2. Ensure `split_demo` is started before your application:
+    mix run demo.exs
 
-    ```elixir
-    def application do
-      [applications: [:split_demo]]
-    end
-    ```
+You should get output similar to:
 
+```
+#Function<59.89908360/2 in Stream.unfold/2>
+{[1], #Function<49.89908360/2 in Stream.resource/3>}
+{[3], #Function<49.89908360/2 in Stream.resource/3>}
+{[5], #Function<49.89908360/2 in Stream.resource/3>}
+{[7, 9, 11], #Function<49.89908360/2 in Stream.resource/3>}
+```
